@@ -1,0 +1,43 @@
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Chala Shikuya</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/regilog.css') }}">
+</head>
+<body>
+    <div class="main">
+      <div class="container a-container" id="a-container">
+        <form class="form" id="a-form" method="POST" action="">
+          {{form.hidden_tag()}}
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                  <div class="button" style="width: 250px;height: 100px;padding:20px"><span>{{ message }}</span></div>
+                {% endfor %}
+           {% endif %}
+          {% endwith %}
+          <h2 class="form_title title">Reset Password</h2>
+          {{form.password(class="form__input",placeholder="Password", id="password")}}
+            {% if form.password.errors %}
+              {% for error in form.password.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>{{ error }}</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.confirm_password(class="form__input",placeholder="Confirm Password",id="cpassword")}}
+            {% if form.confirm_password.errors %}
+              {% for error in form.confirm_password.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>{{ error }}</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.submit(class="form__button button submit",value="RESET",id="rsubmit")}}  
+        </form>
+      </div>
+      <div class="switch" id="switch-cnt">
+        <div class="switch__container " id="switch-c1">
+          <img src="{{url_for('static',filename='images/reset.jpg')}}" style="width: 840px;">
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

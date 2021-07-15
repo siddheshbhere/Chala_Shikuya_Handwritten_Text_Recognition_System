@@ -1,0 +1,84 @@
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Chala Shikuya</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/regilog.css') }}">
+</head>
+<body>
+    <div class="main">
+      <div class="container a-container" id="a-container">
+        <form class="form" id="a-form" method="POST" action="">
+          {{form.hidden_tag()}}
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                  <div class="button" style="width: 250px;height: 100px;padding:20px"><span>{{ message }}</span></div>
+                {% endfor %}
+           {% endif %}
+          {% endwith %}
+          <h2 class="form_title title">Create Account</h2>
+          {{form.username(class="form__input",placeholder="Username", id="name")}} 
+            {% if form.username.errors %}
+              {% for error in form.username.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>{{ error }}</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.email(class="form__input",placeholder="Email",id="email")}} 
+            {% if form.email.errors %}
+              {% for error in form.email.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>{{ error }}</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.phone(class="form__input",placeholder="Enter Your Contact number",id="phone")}}
+            {% if form.phone.errors %}
+              {% for error in form.phone.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>Integers only !!! Number must start with 7/8/9 and must be of 10 digits</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.password(class="form__input",placeholder="Password", id="password")}}
+            {% if form.password.errors %}
+              {% for error in form.password.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>{{ error }}</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.confirm_password(class="form__input",placeholder="Confirm Password",id="cpassword")}}
+            {% if form.confirm_password.errors %}
+              {% for error in form.confirm_password.errors %}
+                <div id="error_message" style="background-color:white; color:red; margin-bottom:20px;"><span>{{ error }}</span></div>
+              {% endfor %}
+            {% endif %}
+          {{form.submit(class="form__button button submit",value="SIGN UP",id="rsubmit")}}  
+        </form>
+      </div>
+      <div class="container b-container" id="b-container">
+        <form class="form" id="b-form" method="POST" action="{{ url_for('login')}}" onsubmit="return validatel();">
+          <h2 class="form_title title">Sign in to Website</h2>
+          <input class="form__input" type="text" placeholder="Username" id="namel" name="namel">
+          <div id="error_messagel" style="background-color:white; color:red; margin-bottom:20px;"></div>
+          <input class="form__input" type="password" placeholder="Password"  id="passwordl" name="passwordl">
+          <div id="error_message1" style="background-color:white; color:red; margin-bottom:20px;"></div>
+          <a class="form__link" href="{{ url_for('reset_request')}}">Forgot your password?</a>
+          <input class="form__button button submit" type="submit" value="SIGN IN" name="lsubmit" id="lsubmit"/>
+        </form>
+      </div>
+      <div class="switch" id="switch-cnt">
+        <div class="switch__circle"></div>
+        <div class="switch__circle switch__circle--t"></div>
+        <div class="switch__container " id="switch-c1">
+          <h2 class="switch__title title">Welcome Back !</h2>
+          <p class="switch__description description">To keep connected with us please login with your personal info</p>
+          <button class="switch__button button switch-btn">SIGN IN</button>
+        </div>
+        <div class="switch__container is-hidden" id="switch-c2">
+          <h2 class="switch__title title">Hello Friend !</h2>
+          <p class="switch__description description">Enter your personal details and start journey with us</p>
+          <button class="switch__button button switch-btn">SIGN UP</button>
+        </div>
+      </div>
+    </div>
+
+  
+        <script type = "text/javascript" src="{{ url_for('static', filename='js/regilogregilog.js') }} "></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+  }
+  h2,
+  p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  
+  main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #38B6FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+/* Navigation bar */
+
+.tinav{
+    background-color: rgba(0,0,0,.2);
+    
+  }
+
+.navbar{
+    padding:0 0 1rem 0;
+  }
+  
+  .navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-item{
+    padding: 0 18px;
+  }
+  
+  .nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight:normal;
+  }
+  
+  
+  
+
+  .glass {
+    background: white;
+    min-height: 90vh;
+    width: 80%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+   
+    backdrop-filter: blur(2rem);
+    
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+
+  /* Canvas */
+
+  #sketchpad {
+    border: 5px;
+    border-style: solid;
+    border-color: #38B6FF;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 100px;
+    background-color: #fff;
+}
+
+
+
+#predict {
+
+    font-size: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+body {
+
+    display: block;
+    text-align: center;
+   
+}
+
+#predict {
+
+    border-style: none;
+}
+  
+#sketchpadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+@media only screen and (max-device-width: 398px) {
+
+ html{
+   width: 600px;
+ }
+
+ form{
+   height: 1100px;
+ }
+ 
+}
+

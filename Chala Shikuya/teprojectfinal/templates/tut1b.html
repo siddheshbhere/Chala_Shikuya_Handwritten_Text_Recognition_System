@@ -1,0 +1,395 @@
+{% if current_user.is_authenticated %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chala Shikuya</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tut1.css') }}">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <main>
+        <div style="width: 100%;">
+            <div style="width: 100%; ">
+            <div style="width: 100%;">
+                <nav class="navbar  navbar-expand-lg navbar-dark tinav ">
+                  <a class="navbar-brand" href="">Chala Shikuya</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Hello {{ current_user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Your account</a>
+                          <a class="dropdown-item" href="#">Your status</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#footer">Contact us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout')}}">Log Out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+                </div>
+                
+                    <section class="glass row">
+                        
+                            <div class="col-lg-3 col-md-3">
+                                <div class="card">
+                                    <img src="{{ url_for('static', filename='images/14.jpg') }}" alt="" />
+                                    <div class="card-info">
+                                      <h1 style="text-align: center;">क</h1>
+                                    </div>
+                                    <a href="{{ url_for('can',v1=2,v2=13) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                                  </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <div class="card">
+                                    <img src="{{ url_for('static', filename='images/15.jpg') }}" alt="" />
+                                    <div class="card-info">
+                                      <h1 style="text-align: center;">ख</h1>
+                                    </div>
+                                    <a href="{{ url_for('can',v1=2,v2=14) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                                  </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                              <div class="card">
+                                  <img src="{{ url_for('static', filename='images/16.jpg') }}" alt="" />
+                                  <div class="card-info">
+                                    <h1 style="text-align: center;">ग</h1>
+                                  </div>
+                                  <a href="{{ url_for('can',v1=2,v2=15) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                                </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/17.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">घ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=16) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/18.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ङ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=17) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/19.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">च</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=18) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/20.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">छ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=19) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/21.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ज</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=20) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/22.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">झ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=21) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/23.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ञ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=22) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/24.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ट</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=23) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/25.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ठ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=24) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/26.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ड</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=25) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/27.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ढ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=26) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/28.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ण</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=27) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/29.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">त</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=28) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/30.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">थ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=29) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/31.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">द</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=30) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/32.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ध</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=31) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/33.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">न</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=32) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/34.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">प</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=33) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/35.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">फ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=34) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/36.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ब</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=35) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/37.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">भ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=36) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/38.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">म</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=37) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/39.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">य</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=38) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/40.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">र</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=39) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/41.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ल</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=40) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/42.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">व</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=41) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/43.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">श</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=42) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/44.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ष</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=43) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/45.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">स</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=44) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/46.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ह</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=45) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/47.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ळ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=46) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/48.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">क्ष</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=47) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                          
+                          <div class="col-lg-3 col-md-3">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/50.jpg') }}" alt="" />
+                                <div class="card-info">
+                                  <h1 style="text-align: center;">ज्ञ</h1>
+                                </div>
+                                <a href="{{ url_for('can',v1=2,v2=49) }}" class="btn btn-lg" style="background-color: #38B6FF; color:#fff;">Practice</a>
+                              </div>
+                          </div>
+                           
+                    </section>
+                
+                
+        </div>
+      
+    </main>
+    
+  </body>
+</html>
+{%else%}
+  {{ redirect(url_for('index')) }}
+{%endif%}

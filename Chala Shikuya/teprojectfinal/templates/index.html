@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Chala Shikuya</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+      <!-- Title -->
+
+    <div class="row title" style="background-image: url('{{ url_for('static', filename='images/education.png')}}'); z-index: -1; width: 100%">
+        <h1></h1>
+         <!-- Nav Bar -->
+      <div style="width: 100%;">
+      <nav class="navbar  navbar-expand-lg navbar-dark tinav " style="background-color: #000000; opacity: 0.7;">
+        <a class="navbar-brand" href="">Chala Shikuya</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+	    <li class="nav-item">
+              <a class="nav-link" href="#testimonials">How to use</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('regilog')}}">Register/Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+    </div>
+
+
+
+  <!-- Features -->
+
+  <section id="features">
+
+    <div class="row">
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-check-circle fa-4x"></i>
+        <h3>Easy to use.</h3>
+        <p>So easy to use, anyone can use it.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-bullseye fa-4x"></i>
+        <h3>Elite Clientele</h3>
+        <p>We have tutorials for individual marathi alphabets.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-heart fa-4x"></i>
+        <h3>Guaranteed to work.</h3>
+        <p>It is userfriendly and working properly.</p>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+   <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <div id="testomonials-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 style="color: #000;">Instructions for How to Use the website</h2>
+          <ol style="text-align: justify;">
+            <li>The first time a user visits the site, he or she must create an account by clicking on the register/login option at the top right corner. The user must log in after registering.</li>
+            <li>User will be redirected to next page where he or she will be able to select the language.</li>
+            <li>After choosing a language, the user can either practise on the canvas or watch video tutorials.</li>
+            <li>Once the preceding step is completed, the user will have access to the alphabets and numbers sections.</li>
+          </ol>
+          <video src="{{url_for('static',filename='videos/english.mp4')}}" controls style="width: 40%;"></video>
+        </div>
+        <div class="carousel-item">
+          <!-- #054b85 -->
+          <h2 style="color: #000;">वेबसाइट कशी वापरावी यासाठी सूचना</h2> 
+          <ol style="text-align: justify;">
+            <li>जेव्हा वापरकर्त्याने प्रथमच साइटला भेट दिली तेव्हा त्याने उजवीकडे वरच्या उजव्या कोपर्‍यात रजिस्टर / लॉगिन पर्यायावर क्लिक करून खाते तयार केले पाहिजे. नोंदणी केल्यानंतर वापरकर्त्याने लॉग इन केले पाहिजे.</li>
+            <li>वापरकर्त्यास पुढील पृष्ठावर पुनर्निर्देशित केले जाईल जेथे तो किंवा ती भाषा निवडण्यास सक्षम असेल.</li>
+            <li>भाषा निवडल्यानंतर, एकतर कॅनव्हासवर सराव किंवा व्हिडिओ ट्यूटोरियल पाहू शकता.</li>
+            <li>मागील चरण पूर्ण झाल्यावर वापरकर्त्याला अक्षरे आणि संख्या विभागांमध्ये प्रवेश असेल.</li>
+          </ol>
+          <video src="{{url_for('static',filename='videos/marathi.mp4')}}" controls style="width: 40%;"></video>
+        </div>
+        <!-- <div class="carousel-item">
+          <h2 style="color: #000;">ওয়েবসাইটটি কীভাবে ব্যবহার করবেন সে সম্পর্কে নির্দেশাবলী</h2>
+          <ol style="text-align: justify;">
+            <li>কোনও ব্যবহারকারী প্রথমবার সাইটটি দেখার জন্য, তার বা তার উপরের ডান কোণে নিবন্ধ / লগইন বিকল্পে ক্লিক করে একটি অ্যাকাউন্ট তৈরি করতে হবে। ব্যবহারকারীকে নিবন্ধনের পরে লগ ইন করতে হবে।</li>
+            <li>ব্যবহারকারীকে পরবর্তী পৃষ্ঠায় পুনঃনির্দেশিত করা হবে যেখানে তিনি ভাষা নির্বাচন করতে সক্ষম হবেন।</li>
+            <li>ভাষা চয়ন করার পরে, ব্যবহারকারী হয় ক্যানভাসে অনুশীলন করতে পারেন বা ভিডিও টিউটোরিয়াল দেখতে পারেন।</li>
+            <li>পূর্ববর্তী পদক্ষেপটি শেষ হয়ে গেলে ব্যবহারকারীর বর্ণমালা এবং সংখ্যা বিভাগগুলিতে অ্যাক্সেস পাবেন।</li>
+          </ol>
+        </div> -->
+      </div>
+      <a class="carousel-control-prev" href="#testomonials-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+
+      </a>
+      <a class="carousel-control-next" href="#testomonials-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+
+
+
+  </section>
+
+
+  <!--About us-->
+  <section id="about">
+
+    <h2>About us</h2>
+
+    <div class="row">
+      <div class="about-column col-lg-3 col-md-6 col-sm-6">
+          <img src="{{ url_for('static', filename='images/rohit.jpg') }}" class="about-img rounded-circle" alt="...">
+            <h4 class="card-title">Rohit Jadhav</h4>
+            <p class="card-text">Qualification: Student(Computer Engineering)</p>
+      </div>
+
+      <div class="about-column col-lg-3 col-md-6 col-sm-6">
+          <img src="{{ url_for('static', filename='images/sid.png') }}" class="about-img rounded-circle" alt="...">
+            <h4 class="card-title">Siddhesh Bhere</h4>
+            <p class="card-text">Qualification: Student(Computer Engineering)</p>
+      </div>
+
+      <div class="about-column col-lg-3 col-md-6 col-sm-6">
+          <img src="{{ url_for('static', filename='images/kedar.jpg') }}" class="about-img rounded-circle" alt="...">
+            <h4 class="card-title">Kedar Kharde</h4>
+            <p class="card-text">Qualification: Student(Computer Engineering)</p>
+      </div>
+
+      <div class="about-column col-lg-3 col-md-6 col-sm-6">
+        <img src="{{ url_for('static', filename='images/sid2.jpg')}}" class="about-img rounded-circle" alt="...">
+          <h4 class="card-title">Siddhesh Gadge</h4>
+          <p class="card-text">Qualification: Student(Computer Engineering)</p>
+    </div>
+
+    </div>
+
+
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <i class="social-icon fab fa-facebook-f fa-2x"></i>
+    <i class="social-icon fab fa-twitter fa-2x"></i>
+    <i class="social-icon fab fa-instagram fa-2x"></i>
+    <i class="social-icon fas fa-envelope fa-2x"></i>
+    <p style="color:#fff;">© Copyright 2021 Chala Shikuya</p>
+
+  </footer>
+
+
+</body>
+
+</html>
